@@ -14,7 +14,7 @@ const ProductsExplore = () => {
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     products.map(product => <ProductExpo
-                        key={product.id}
+                        key={product._id}
                         product={product}
                     ></ProductExpo>)
 
