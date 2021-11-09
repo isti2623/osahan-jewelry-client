@@ -37,6 +37,16 @@ const Navigation = () => {
                             >
                                 Explore
                             </NavLink>
+                            <NavLink
+                                className='text-decoration-none mx-3 fs-5 text-dark mt-4'
+                                to="/login"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "black"
+                                }}
+                            >
+                                Login
+                            </NavLink>
 
                         </Nav>
                     </Navbar.Collapse>

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
 import Explore from './Pages/Explore/Explore/Explore';
+import Login from './Pages/Login/Login/Login';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path='/explore'>
             <Explore></Explore>
+          </Route>
+          <Route path='/login'>
+            <Login></Login>
           </Route>
         </Switch>
       </Router>
