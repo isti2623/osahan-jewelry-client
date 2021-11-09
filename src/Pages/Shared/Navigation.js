@@ -39,6 +39,7 @@ const Navigation = () => {
                             >
                                 Explore
                             </NavLink>
+                            <p className='text-danger'>Name: {user.email}</p>
                             {
                                 user.email ?
                                     <NavLink
