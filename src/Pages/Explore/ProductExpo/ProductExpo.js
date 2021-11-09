@@ -14,7 +14,7 @@ const ProductExpo = (props) => {
                         <p className="card-text">Price: {price}</p>
                     </div>
                     <div className="card-footer">
-                        <Link to='/'><div className="btn btn-danger fw-bold">BUY NOW</div></Link>
+                        <Link to='/purchase'><div className="btn btn-danger fw-bold">BUY NOW</div></Link>
                     </div>
                 </div>
             </div>

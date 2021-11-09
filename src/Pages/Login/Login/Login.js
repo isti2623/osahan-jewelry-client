@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
 import useFirebase from '../../../hooks/useFirebase';
 import Footer from '../../Shared/Footer';
 import Navigation from '../../Shared/Navigation';
@@ -14,9 +13,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
-    const location = useLocation();
-    const history = useHistory();
-    const redirect_uri = location.state?.from || '/home'
+
 
 
     const hanldeName = (e) => {
@@ -37,7 +34,7 @@ const Login = () => {
 
     const handleLogin = () => {
         loginUser(email, password);
-        history.push(redirect_uri)
+
     };
     return (
         <>

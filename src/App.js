@@ -8,6 +8,8 @@ import Home from './Pages/Home/Home/Home';
 import Explore from './Pages/Explore/Explore/Explore';
 import Login from './Pages/Login/Login/Login';
 import AuthProvider from './context/AuthProvider/AuthProvider';
+import Purchase from './Pages/Purchase/Purchase/Purchase';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
+            <PrivateRoute path='/purchase'>
+              <Purchase></Purchase>
+            </PrivateRoute>
           </Switch>
         </Router>
       </AuthProvider>
