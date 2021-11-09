@@ -18,21 +18,21 @@ const Navigation = () => {
                             navbarScroll
                         >
                             <NavLink
-                                className='text-decoration-none mx-3 fs-5 text-warning ms-3 mt-4'
+                                className='text-decoration-none mx-3 fs-5 text-dark ms-3 mt-4'
                                 to="/home"
                                 activeStyle={{
                                     fontWeight: "bold",
-                                    color: "red"
+                                    color: "black"
                                 }}
                             >
                                 Home
                             </NavLink>
                             <NavLink
-                                className='text-decoration-none mx-3 fs-5 text-warning mt-4'
+                                className='text-decoration-none mx-3 fs-5 text-dark mt-4'
                                 to="/explore"
                                 activeStyle={{
                                     fontWeight: "bold",
-                                    color: "red"
+                                    color: "black"
                                 }}
                             >
                                 Explore

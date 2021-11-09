@@ -1,0 +1,12 @@
+.banner{
+    background-image: url('../../../images/banner.jpg');
+    height: 600px;
+    width: 100%;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+    
+}
