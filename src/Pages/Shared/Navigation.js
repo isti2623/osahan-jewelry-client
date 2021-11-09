@@ -2,8 +2,10 @@ import React from 'react';
 import logo from '../../images/header-logo.png'
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Navigation = () => {
+    const { user } = useAuth();
     return (
         <div>
             <Navbar bg="light" expand="lg">
@@ -37,16 +39,30 @@ const Navigation = () => {
                             >
                                 Explore
                             </NavLink>
-                            <NavLink
-                                className='text-decoration-none mx-3 fs-5 text-dark mt-4'
-                                to="/login"
-                                activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "black"
-                                }}
-                            >
-                                Login
-                            </NavLink>
+                            {
+                                user.email ?
+                                    <NavLink
+                                        className='text-decoration-none mx-3 fs-5 text-dark mt-4'
+                                        to="/login"
+                                        activeStyle={{
+                                            fontWeight: "bold",
+                                            color: "black"
+                                        }}
+                                    >
+                                        Logout
+                                    </NavLink>
+                                    :
+                                    <NavLink
+                                        className='text-decoration-none mx-3 fs-5 text-dark mt-4'
+                                        to="/login"
+                                        activeStyle={{
+                                            fontWeight: "bold",
+                                            color: "black"
+                                        }}
+                                    >
+                                        Login
+                                    </NavLink>
+                            }
 
                         </Nav>
                     </Navbar.Collapse>

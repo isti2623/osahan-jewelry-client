@@ -13,11 +13,15 @@ const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'
 
 
+    const hanldeName = (e) => {
+        setName(e.target.value);
+    };
     const hanldeEmail = (e) => {
         setEmail(e.target.value);
     };
@@ -43,6 +47,12 @@ const Login = () => {
                     <div className="col-md-6">
                         <div>
                             <div className="form-input mt-5">
+                                <input
+                                    onChange={hanldeName}
+                                    className="mt-2 p-2"
+                                    placeholder="User Name"
+                                />
+                                <br />
                                 <input
                                     onChange={hanldeEmail}
                                     className="mt-2 p-2"
