@@ -5,8 +5,7 @@ const Explore = () => {
     return (
         <div>
             <Navigation></Navigation>
-            <h2>Explore
-            </h2>
+
         </div>
     );
 };
