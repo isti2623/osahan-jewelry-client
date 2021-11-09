@@ -1,0 +1,44 @@
+[
+    {
+        "id": 101,
+        "name": "Citygold Exclusive Ring",
+        "img": "https://i.ibb.co/PQptHD2/1.jpg",
+        "price": 59,
+        "desc": "Package includes 2 finger rings – 1 for gent and 1 for lady"
+    },
+    {
+        "id": 102,
+        "name": "Gold",
+        "img": "https://i.ibb.co/HBfxRk1/2.jpg",
+        "price": 65,
+        "desc": "Trendy and stylish for men and women."
+    },
+    {
+        "id": 103,
+        "name": "Year Ring",
+        "img": "https://i.ibb.co/wwP33db/3.jpg",
+        "price": 99,
+        "desc": "Stone Crafted Adjustable Couple Finger Ring - DST 06’ set."
+    },
+    {
+        "id": 104,
+        "name": "Hair Ring",
+        "img": "https://i.ibb.co/mStrm2J/4.jpg",
+        "price": 88,
+        "desc": "Set includes 1 finger ring for men and 1 finger ring for women."
+    },
+    {
+        "id": 105,
+        "name": "Hair Ring",
+        "img": "https://i.ibb.co/4frX5kH/5.jpg",
+        "price": 70,
+        "desc": "Then look no further! This glorious gift is certain to "
+    },
+    {
+        "id": 106,
+        "name": "Flutter - Advanced Course",
+        "img": "https://i.ibb.co/7JBP3L8/6.jpg",
+        "price": 26,
+        "desc": "put a lot of thought into your gift purchase"
+    }
+]
