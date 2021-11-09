@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../images/header-logo.png'
 import { Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
@@ -17,8 +17,26 @@ const Navigation = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link to='/home'><Nav.Link href="#action1">Home</Nav.Link></Link>
-                            <Link to='/explore'><Nav.Link href="#action1">Explore</Nav.Link></Link>
+                            <NavLink
+                                className='text-decoration-none mx-3 fs-5 text-warning ms-3 mt-4'
+                                to="/home"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                            >
+                                Home
+                            </NavLink>
+                            <NavLink
+                                className='text-decoration-none mx-3 fs-5 text-warning mt-4'
+                                to="/explore"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                            >
+                                Explore
+                            </NavLink>
 
                         </Nav>
                     </Navbar.Collapse>
