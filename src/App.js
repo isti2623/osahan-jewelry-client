@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Admin from './Pages/Admin/Admin/Admin';
 import AdminRoute from './Pages/Login/AdminRoute/AdminRoute';
+import Register from './Pages/Login/Register/Register';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register />
             </Route>
             <PrivateRoute path='/purchase'>
               <Purchase></Purchase>

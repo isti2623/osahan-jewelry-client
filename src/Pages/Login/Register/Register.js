@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
-import { Alert, Button, Spinner } from 'react-bootstrap';
-import { useHistory, useLocation } from 'react-router';
+import { Alert, Spinner, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.png'
 import Navigation from '../../Shared/Navigation';
 
-const Login = () => {
+const Register = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, loginUser, isLoading, authError } = useAuth();
 
-    const location = useLocation();
-    const history = useHistory();
+    const { user, registerUser, isLoading, authError } = useAuth();
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -21,14 +18,18 @@ const Login = () => {
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = e => {
-        loginUser(loginData.email, loginData.password, location, history);
+        if (loginData.password !== loginData.password2) {
+            alert('Your password did not match');
+            return
+        }
+        registerUser(loginData.email, loginData.password);
         e.preventDefault();
     }
     return (
         <div>
             <Navigation></Navigation>
             <div className="container">
-                <h2 className='text-danger fs-1 fw-bold my-5'>Login</h2>
+                <h2 className='text-danger fs-1 fw-bold my-5'>Register</h2>
                 <div className="row">
                     <div className="col-lg-6">
                         <form onSubmit={handleLoginSubmit}>
@@ -50,10 +51,19 @@ const Login = () => {
                                 onChange={handleOnChange}
                             />
                             <br />
+                            <input
+                                className="mt-3 mb-3"
+                                placeholder="Your Confirm Password"
+                                name="password2"
+                                type="password"
+                                required
+                                onChange={handleOnChange}
+                            />
+                            <br />
 
-                            <Button className="mt-3 mb-5" type="submit" variant="danger">Login</Button>
+                            <Button className="mt-3 mb-5" type="submit" variant="danger">Register</Button>
 
-                            <Link to='/register'><p className='text-danger'>New User? Please Register</p></Link>
+                            <Link to='/login'><p className='text-danger'>Already Register? Please Login</p></Link>
 
                             {isLoading && <Spinner animation="grow" />}
                             {user?.email && <Alert variant="success">Login successfully!</Alert>}
@@ -69,4 +79,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
