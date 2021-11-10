@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Alert, Spinner, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.png'
 import Navigation from '../../Shared/Navigation';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
+    const history = useHistory();
+    const { user, registerUser, isLoading } = useAuth();
 
-    const { user, registerUser, isLoading, authError } = useAuth();
-
-    const handleOnChange = e => {
+    const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...loginData };
@@ -22,7 +22,7 @@ const Register = () => {
             alert('Your password did not match');
             return
         }
-        registerUser(loginData.email, loginData.password);
+        registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault();
     }
     return (
@@ -34,12 +34,21 @@ const Register = () => {
                     <div className="col-lg-6">
                         <form onSubmit={handleLoginSubmit}>
                             <input
+                                className="mt-5"
+                                placeholder="Your Name"
+                                name="name"
+                                type="text"
+                                required
+                                onBlur={handleOnBlur}
+                            />
+                            <br />
+                            <input
                                 className="mt-5 mb-3"
                                 placeholder="Your Email"
                                 name="email"
                                 type="email"
                                 required
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                             />
                             <br />
                             <input
@@ -48,7 +57,7 @@ const Register = () => {
                                 name="password"
                                 type="password"
                                 required
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                             />
                             <br />
                             <input
@@ -57,7 +66,7 @@ const Register = () => {
                                 name="password2"
                                 type="password"
                                 required
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                             />
                             <br />
 

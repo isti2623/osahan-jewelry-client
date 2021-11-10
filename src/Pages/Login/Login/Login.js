@@ -8,12 +8,12 @@ import Navigation from '../../Shared/Navigation';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, loginUser, isLoading, authError } = useAuth();
+    const { user, loginUser, isLoading } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
 
-    const handleOnChange = e => {
+    const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...loginData };
@@ -38,7 +38,7 @@ const Login = () => {
                                 name="email"
                                 type="email"
                                 required
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                             />
                             <br />
                             <input
@@ -47,7 +47,7 @@ const Login = () => {
                                 name="password"
                                 type="password"
                                 required
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                             />
                             <br />
 
