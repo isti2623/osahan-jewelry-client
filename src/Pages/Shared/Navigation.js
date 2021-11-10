@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Navigation = () => {
-    const { user, logout } = useAuth();
+    const { user, logout, admin } = useAuth();
     return (
         <div>
             <Navbar bg="light" expand="lg">
@@ -53,7 +53,7 @@ const Navigation = () => {
                                 </NavLink>
                             }
                             {
-                                user.email &&
+                                admin &&
                                 <NavLink
                                     className='text-decoration-none mx-3 fs-5 text-dark mt-4'
                                     to="/admin"

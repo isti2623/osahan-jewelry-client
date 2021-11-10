@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Alert, Button } from 'react-bootstrap';
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -23,6 +23,7 @@ const MakeAdmin = () => {
             .then(data => {
                 if (data.modifiedCount) {
                     console.log(data);
+                    setEmail('');
                     setSuccess(true);
 
                 }
@@ -44,6 +45,10 @@ const MakeAdmin = () => {
                 </Button>
 
             </form>
+
+            {success && <Alert variant='success'>
+                Admin Role Added Successfully
+            </Alert>}
         </div>
     );
 };
