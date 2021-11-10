@@ -26,7 +26,7 @@ const MyOrders = () => {
                 setProducts(data);
 
             })
-    }, [products]);
+    }, []);
 
     //DELETE AN Products
     const handleDeleteUser = id => {
