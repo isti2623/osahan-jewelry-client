@@ -12,6 +12,7 @@ import Purchase from './Pages/Purchase/Purchase/Purchase';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Admin from './Pages/Admin/Admin/Admin';
+import AdminRoute from './Pages/Login/AdminRoute/AdminRoute';
 
 function App() {
   return (
@@ -37,9 +38,9 @@ function App() {
             <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
             </PrivateRoute>
-            <PrivateRoute path='/admin'>
+            <AdminRoute path='/admin'>
               <Admin></Admin>
-            </PrivateRoute>
+            </AdminRoute>
           </Switch>
         </Router>
       </AuthProvider>
