@@ -39,7 +39,7 @@ const Review = () => {
                     <br />
                     <textarea required className='p-2 m-2' type='text' placeholder='description' {...register("desc")} />
                     <br />
-                    <input required className='p-2 m-2' type='text' placeholder='rating within 1 to 5' {...register("rating")} />
+                    <input required className='p-2 m-2' type='number' placeholder='rating within 1 to 5' {...register("rating")} />
                     <br />
                     {/* errors will return when field validation fails  */}
                     {errors.exampleRequired && <span>This field is required</span>}
