@@ -31,11 +31,11 @@ const Review = () => {
             <div className='form-part'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {/* register your input into the hook by invoking the "register" function */}
-                    <input required className='p-2 m-2' defaultValue={user.name} type='text' placeholder='name' {...register("name")} />
+                    <input disabled required className='p-2 m-2' defaultValue={user.displayName} type='text' placeholder='name' {...register("name")} />
                     <br />
 
                     {/* include validation with required or other standard HTML validation rules */}
-                    <input required className='p-2 m-2' defaultValue={user.email} type='email'  {...register("email")} />
+                    <input disabled required className='p-2 m-2' defaultValue={user.email} type='email'  {...register("email")} />
                     <br />
                     <textarea required className='p-2 m-2' type='text' placeholder='description' {...register("desc")} />
                     <br />
