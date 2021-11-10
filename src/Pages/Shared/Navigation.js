@@ -53,6 +53,20 @@ const Navigation = () => {
                                 </NavLink>
                             }
                             {
+                                user.email &&
+                                <NavLink
+                                    className='text-decoration-none mx-3 fs-5 text-dark mt-4'
+                                    to="/admin"
+                                    activeStyle={{
+                                        fontWeight: "bold",
+                                        color: "black"
+                                    }}
+                                >
+                                    Admin
+                                </NavLink>
+                            }
+
+                            {
                                 user.email ?
                                     <Button onClick={logout}>Logout</Button>
                                     :
