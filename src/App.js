@@ -14,6 +14,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Admin from './Pages/Admin/Admin/Admin';
 import AdminRoute from './Pages/Login/AdminRoute/AdminRoute';
 import Register from './Pages/Login/Register/Register';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
             <AdminRoute path='/admin'>
               <Admin></Admin>
             </AdminRoute>
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </Router>
       </AuthProvider>
