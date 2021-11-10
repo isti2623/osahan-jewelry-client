@@ -35,15 +35,17 @@ const Purchase = () => {
             <h2>Purchase</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
-                <input required className='p-2 m-2' defaultValue={user.email} placeholder='email' {...register("address")} />
+                <input disabled required className='p-2 m-2' defaultValue={user.displayName} placeholder='name' {...register("name")} />
+                <br />
+                <input disabled required className='p-2 m-2' defaultValue={user.email} placeholder='email' {...register("email")} />
                 <br />
 
 
 
                 {/* include validation with required or other standard HTML validation rules */}
-                <input required className='p-2 m-2' placeholder='address' type='text' {...register("phone")} />
-                <br />
                 <input required className='p-2 m-2' placeholder='phone number' type='number' {...register("phone")} />
+                <br />
+                <input required className='p-2 m-2' placeholder='Address' type='text' {...register("address")} />
                 <br />
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
