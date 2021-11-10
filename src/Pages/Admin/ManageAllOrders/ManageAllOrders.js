@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
     const [reload, setReload] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://infinite-beyond-84815.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => {
                 setReload(!reload)
@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://infinite-beyond-84815.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'DELETE',
             })
@@ -41,7 +41,7 @@ const ManageAllOrders = () => {
     function handleConfirm(id) {
         const proceed = window.confirm('Are you sure, you want to Shipped?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://infinite-beyond-84815.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'PUT',
             })

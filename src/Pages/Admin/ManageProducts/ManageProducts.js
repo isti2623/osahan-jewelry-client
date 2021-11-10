@@ -3,7 +3,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     const [order, setOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://infinite-beyond-84815.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products])
@@ -12,7 +12,7 @@ const ManageProducts = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`
+            const url = `https://infinite-beyond-84815.herokuapp.com/products/${id}`
             fetch(url, {
                 method: 'DELETE',
             })

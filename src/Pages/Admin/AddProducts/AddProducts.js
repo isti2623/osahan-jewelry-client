@@ -9,7 +9,7 @@ const AddProducts = () => {
 
         data.email = user.email;
 
-        fetch("http://localhost:5000/addProducts", {
+        fetch("https://infinite-beyond-84815.herokuapp.com/addProducts", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
