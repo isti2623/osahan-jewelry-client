@@ -42,7 +42,7 @@ const AddProducts = () => {
                     {/* errors will return when field validation fails  */}
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
-                    <input className='btn btn-warning ms-2' value='Add Products' type="submit" />
+                    <input className='btn btn-danger ms-2' value='Add Products' type="submit" />
                 </form>
             </div>
         </div>
