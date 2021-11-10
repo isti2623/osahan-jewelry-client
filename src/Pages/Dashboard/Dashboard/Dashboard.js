@@ -1,9 +1,11 @@
 import React from 'react';
+import DashboardNavigation from '../DashboardNavigation/DashboardNavigation';
 
 const Dashboard = () => {
     return (
         <div>
-            <h2>Dashboard</h2>
+            <DashboardNavigation></DashboardNavigation>
+
         </div>
     );
 };
