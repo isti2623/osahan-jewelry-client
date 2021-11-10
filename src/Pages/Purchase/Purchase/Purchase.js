@@ -16,7 +16,7 @@ const Purchase = () => {
 
 
 
-        fetch("http://localhost:5000/orders", {
+        fetch("https://infinite-beyond-84815.herokuapp.com/orders", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

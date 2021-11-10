@@ -4,7 +4,7 @@ import SingleRev from '../SingleRev/SingleRev';
 const Review = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/addReviews')
+        fetch('https://infinite-beyond-84815.herokuapp.com/addReviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
